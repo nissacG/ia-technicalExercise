@@ -17,7 +17,7 @@ const Cards = () => {
     const cards = cardData?.data || []
 
     return (
-        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:grid-rows-2 lg:grid-rows-3 xl:grid-rows-4 gap-4 lg:gap-8 h-full w-full p-8">
+        <div className="flex flex-col md:grid md:max-xl:grid-cols-2 xl:grid-cols-3 md:max-xl:grid-rows-2 xl:grid-rows-3 gap-4 xl:gap-8 h-full w-full p-8">
             {/* shouldn't use index */}
             {cards.map(({ title, subTitle, date, url, description, chart }: CardProps, index: number) => (
                 <Card
