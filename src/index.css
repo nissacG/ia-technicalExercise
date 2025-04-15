@@ -41,10 +41,33 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@font-face {
+  font-family: "proxima-nova";
+  src: local("proximanova-Regular"),
+    url('./assets/fonts/proximanova-regular.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima-nova";
+  src: local("proximanova-Semibold"),
+    url('./assets/fonts/proximanova-semibold.woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "proxima-nova";
+  src: local("proximanova-Bold"),
+    url('./assets/fonts/proximanova-bold.woff2');
+  font-weight: 900;
+}
+
+
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: var(--color-ia-background);
+  --foreground: var(--color-ia-text-body);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -74,6 +97,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Interactive Advisors Theme */
+  --color-ia-background: #001424;
+  --color-ia-text-body: rgba(255, 255, 255, 0.75);
+
+  font-family: "proxima-nova", sans-serif;
+  color: var(--color-ia-text-body);
+
 }
 
 .dark {
