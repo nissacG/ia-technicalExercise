@@ -1,3 +1,5 @@
+import { Calendar } from "lucide-react";
+
 export interface CardProps {
     title: string;
     subTitle: string;
@@ -10,13 +12,19 @@ export interface CardProps {
 const Card = ({ title, subTitle, date, url, description, chart }: CardProps) => {
     return (
         <div className="bg-card text-card-foreground rounded-lg shadow-md p-4 flex flex-col">
-            <h2 className="text-xl font-bold mb-2">{title}</h2>
+            <div className="flex justify-between items-center mb-2">
+                <h2 className="text-xl font-bold">{title}</h2>
+                <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    <span>{date}</span>
+                </div>
+            </div>
             <h3 className="text-md mb-2">{subTitle}</h3>
-            <p className="text-sm text-muted-foreground mb-2">Date: {date}</p>
-            <a href={url} className="text-primary hover:underline mb-2" target="_blank" rel="noopener noreferrer">
+            <a href={url} className="text-white hover:underline mb-2" target="_blank" rel="noopener noreferrer">
                 {url}
             </a>
-            <p className="text-sm mb-4">{description}</p>
+            <p className="line-clamp-2 xl:line-clamp-3 mb-4">{description}</p>
+
             <div className="mt-auto">
                 <h4 className="text-sm font-semibold mb-2">Chart Data:</h4>
                 <div className="h-32 bg-muted rounded p-2 overflow-auto">

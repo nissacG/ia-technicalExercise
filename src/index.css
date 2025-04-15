@@ -97,10 +97,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --card: var(--color-ia-background-card);
+  --card-foreground: var(--color-ia-text-body);
 
   /* Interactive Advisors Theme */
   --color-ia-background: #001424;
   --color-ia-text-body: rgba(255, 255, 255, 0.75);
+  --color-ia-background-card: #001c32;
+
 
   font-family: "proxima-nova", sans-serif;
   color: var(--color-ia-text-body);
