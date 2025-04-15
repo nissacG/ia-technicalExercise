@@ -1,4 +1,5 @@
 import { Calendar } from "lucide-react";
+import { Chart } from "../Chart/Chart";
 
 export interface CardProps {
     title: string;
@@ -25,15 +26,8 @@ const Card = ({ title, subTitle, date, url, description, chart }: CardProps) => 
             </a>
             <p className="line-clamp-2 xl:line-clamp-3 mb-4">{description}</p>
 
-            <div className="mt-auto">
-                <h4 className="text-sm font-semibold mb-2">Chart Data:</h4>
-                <div className="h-32 bg-muted rounded p-2 overflow-auto">
-                    {chart.map((point, index) => (
-                        <div key={index} className="text-xs">
-                            x: {point.x}, y: {point.y}
-                        </div>
-                    ))}
-                </div>
+            <div className="mt-auto bg-muted rounded p-2 overflow-auto">
+                <Chart chartData={chart} />
             </div>
         </div>
     );

@@ -14,12 +14,10 @@ const Cards = () => {
         return <Error error={error} />
     }
 
-    const cards = cardData?.data || []
-
     return (
         <div className="flex flex-col md:grid md:max-2xl:grid-cols-2 2xl:grid-cols-3 gap-4 2xl:gap-8 h-full w-full p-8">
             {/* shouldn't use index */}
-            {cards.map(({ title, subTitle, date, url, description, chart }: CardProps, index: number) => (
+            {cardData.map(({ title, subTitle, date, url, description, chart }: CardProps, index: number) => (
                 <Card
                     key={index}
                     title={title}
