@@ -61,6 +61,30 @@ I look forward to hearing your review. In the mean time, I will use this as an o
 
 All the best.
 
+---
+
+# Available Scripts
+In the project directory, you can run:
+
+`npm run dev`
+
+Runs the app in the development mode.
+Open http://localhost:5173 to view it in the browser.
+
+`npm run test`
+
+Run tests in watch mode
+
+`npm run test:ui`
+
+Run tests with the Vitest UI
+
+`npm run test:coverage`
+
+Run tests with coverage reporting
+
+
+
 
 
 
